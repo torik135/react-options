@@ -4,4 +4,5 @@ export type {
   ISelect,
   ISelectSingular,
   ISelectMultiple,
+  ISelectProps,
 } from './Selectype';

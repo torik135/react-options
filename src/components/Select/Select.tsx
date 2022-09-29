@@ -1,10 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { ISelect, ISelectOption } from './';
+import { ISelectProps, ISelectOption } from './';
 
 const selectedLi: string = 'bg-rose-600';
 const highlightedLi: string = 'bg-rose-400 text-white';
 
-const Select: React.FC<ISelect> = (props) => {
+const Select: React.FC<ISelectProps> = (props) => {
   const { multiple, value, onChange, options } = props;
   const [optionOpen, setOptionOpen] = useState<boolean>(false);
   const [highlightedIdx, setHighlightedIdx] = useState<number>(0);

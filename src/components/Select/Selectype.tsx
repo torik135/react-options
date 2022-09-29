@@ -1,21 +1,23 @@
-export type ISelectOption = {
+export interface ISelectOption {
   label: string;
   value: string | number;
-};
+}
 
-export type ISelectMultiple = {
+export interface ISelectMultiple {
   multiple: true;
   value: ISelectOption[];
   onChange: (value: ISelectOption[]) => void;
-};
+}
 
-export type ISelectSingular = {
+export interface ISelectSingular {
   multiple?: false;
   value?: ISelectOption;
   onChange: (value: ISelectOption | undefined) => void;
-};
+}
 
 // check this
-export type ISelect = {
+export interface ISelect {
   options: ISelectOption[];
-} & (ISelectSingular | ISelectMultiple);
+}
+
+export type ISelectProps = ISelect & (ISelectSingular | ISelectMultiple);
